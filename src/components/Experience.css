@@ -1,0 +1,162 @@
+.experience-section {
+  background: #0f0f10;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.experience-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 30px;
+  margin-bottom: 50px;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.timeline-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #FF6B35, #F7931E);
+  border-radius: 50%;
+  color: #ffffff;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-line {
+  width: 2px;
+  flex: 1;
+  background: linear-gradient(to bottom, #FF6B35, rgba(255, 107, 53, 0.2));
+  margin-top: 10px;
+}
+
+.timeline-content {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 30px;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateX(10px);
+  border-color: #FF6B35;
+  box-shadow: 0 10px 30px rgba(255, 107, 53, 0.15);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 16px;
+  gap: 20px;
+}
+
+.experience-position {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.experience-company {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #FF6B35;
+}
+
+.experience-meta {
+  text-align: right;
+}
+
+.experience-date {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #e0e0e0;
+  margin-bottom: 4px;
+}
+
+.experience-location {
+  display: block;
+  font-size: 0.85rem;
+  color: #b0b0b0;
+}
+
+.experience-description {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #b0b0b0;
+  margin-bottom: 20px;
+}
+
+.achievement-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.achievement-item {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #b0b0b0;
+}
+
+.achievement-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  background: #FF6B35;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .timeline-item {
+    grid-template-columns: 40px 1fr;
+    gap: 20px;
+  }
+
+  .timeline-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .experience-meta {
+    text-align: left;
+  }
+
+  .experience-position {
+    font-size: 1.25rem;
+  }
+}
