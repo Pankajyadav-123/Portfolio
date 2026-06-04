@@ -3,6 +3,7 @@ import me from "./components/ui/me.jpg";
 import bookStore from "./components/ui/BookStore.png"
 import LMS from "./components/ui/lms.png"
 import jobPortal from "./components/ui/jobPortal.png"
+import resume from "./assets/resume.pdf"
 
 
 export const portfolioData = {
@@ -15,7 +16,7 @@ export const portfolioData = {
     phone: "+91 9721610350",
     location: "Lucknow, India",
     image:me,
-    resume: "/resume.pdf",
+    resume: resume,
     yearsOfExperience: 0
   },
 
