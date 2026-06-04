@@ -3,7 +3,8 @@ import me from "./components/ui/me.jpg";
 import bookStore from "./components/ui/BookStore.png"
 import LMS from "./components/ui/lms.png"
 import jobPortal from "./components/ui/jobPortal.png"
-import resume from "./assets/resume.pdf"
+// Resume file is in public folder - served at root path
+const resume = "/Resume.pdf";
 
 
 export const portfolioData = {
